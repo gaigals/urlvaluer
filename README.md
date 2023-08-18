@@ -30,11 +30,11 @@ Please note that there are certain limitations to the types that are supported
 for conversion to `url.Values`:
 
 - __Maps__: Map types are not directly supported for conversion unless the
-value type contains a String() string method. The library will skip 
+value type contains a `String() string` method. The library will skip 
 unsupported map fields during marshaling.
-- __Structs__: Struct types without a String() string method are not supported
-for conversion. Any such unsupported struct fields will be skipped during 
-marshaling.
+- __Structs__: Struct types without a `String() string` method are not 
+supported for conversion. Any such unsupported struct fields will be skipped
+during marshaling.
 
 ### Example
 
@@ -93,7 +93,7 @@ func main() {
 ```
 
 In this example, the `Person` struct includes a variety of field types, 
-including a pointer to a string and an `interface{}`. The `url` tags 
+including a pointer to a string and an `any`. The `url` tags 
 are used to specify the corresponding keys in the resulting `url.Values`
 map. Fields with the `-` tag are ignored. The resulting URL values are:
 
