@@ -1,4 +1,4 @@
-module urlvaluer
+module github.com/gaigals/urlvaluer
 
 go 1.21.0
 
